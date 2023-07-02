@@ -1,36 +1,37 @@
 id,food_type,temperature,cooking_time
-1, Apples for sauce, 85, 25 minutes
-2, Apples, 85, 30 minutes
-3, Apples for puree, 85, 30 to 40 minutes
-4, Apples candied, 75, 3 hours
-5, Banana, 85, 10 minutes
-6, Bananas for sherbet, 85, 45 minutes
-7, Berries for consomne, 65, 45 minutes
-8, Cherries macerated, 65, 25 minutes
-9, Cherries for jam, 90, 45 minutes to an hour
-10, Pears, 83, 25 minutes
-11, Pears for puree, 83, 45 to 60 minutes
-12, Pineapple, 75, 1 hour 
-13, Plums, 75, 15 to 20 minutes 
-14, Plums for jam, 90, 45 to 60 minutes 
-15, Artichokes barigoule, 85, 45 minutes to 1 and a quarter hours 
-16, Globe artichoke hearts and halfs, 85, 45 minutes to 1 and a quarter hours
-17, Globe artichoke hearts, 85, 45 minutes to 1 and a quarter hours
-18, Globe artichoke hearts for puree, 85, 1 and a half hours 
-19, Violet artichokes, 85, 40 minutes
-20, Asparagus white, 85, 30 minutes
-21, Carrots, 85, 35 to 40 minutes
-22, Carrots glazed, 85, 35 to 40 minutes
-23, Carrots rounds, 95, 3 hours 
-24, Cauliflower, 85, 15 minutes
-25, Celery roots for puree, 85, 1 and a half hours
-26, Corn, 85, 30 minutes
-27, Crosnes, 85, 30 minutes
-28, Fennel, 85, 40 minutes
-29, Fennel baby, 85, 40 minutes
-30, Fennel for puree, 85, 45 minutes to an hour
-31, Fennel wedges, 85, 40 minutes
-32, Onions cipollini, 85, 35 minutes
-33, Onions pearl, 85, 35 to 40 minutes
-34, Onions sweet, 85, 25 minutes
+1,Apples for sauce,85,25 minutes
+2,Apples,85,30 minutes
+3,Apples for puree,85,30 to 40 minutes
+4,Apples candied,75,3 hours
+5,Banana,85,10 minutes
+6,Bananas for sherbet,85,45 minutes
+7,Berries for consomne,65,45 minutes
+8,Cherries macerated,65,25 minutes
+9,Cherries for jam,90,45 minutes to an hour
+10,Pears,83,25 minutes
+11,Pears for puree,83,45 to 60 minutes
+12,Pineapple,75,1 hour 
+13,Plums,75,15 to 20 minutes 
+14,Plums for jam,90,45 to 60 minutes 
+15,Artichokes barigoule,85,45 minutes to 1 and a quarter hours 
+16,Globe artichoke hearts and halfs,85,45 minutes to 1 and a quarter hours
+17,Globe artichoke hearts,85,45 minutes to 1 and a quarter hours
+18,Globe artichoke hearts for puree,85,1 and a half hours 
+19,Violet artichokes,85,40 minutes
+20,Asparagus white,85,30 minutes
+21,Carrots,85,35 to 40 minutes
+22,Carrots glazed,85,35 to 40 minutes
+23,Carrots rounds,95,3 hours 
+24,Cauliflower,85,15 minutes
+25,Celery roots for puree,85,1 and a half hours
+26,Corn,85,30 minutes
+27,Crosnes,85,30 minutes
+28,Fennel,85,40 minutes
+29,Fennel baby,85,40 minutes
+30,Fennel for puree,85,45 minutes to an hour
+31,Fennel wedges,85,40 minutes
+32,Onions cipollini,85,35 minutes
+33,Onions pearl,85,35 to 40 minutes
+34,Onions sweet,85,25 minutes
+
 
