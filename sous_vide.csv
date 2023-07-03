@@ -33,5 +33,10 @@ id,food_type,temperature,cooking_time
 32,Onions cipollini,85,35 minutes
 33,Onions pearl,85,35 to 40 minutes
 34,Onions sweet,85,25 minutes
+35,Onions white for sauce,85,6 hours
+36,Potatoes pommes sarladaises,85,20 to 25 minutes
+37,Potatoes confit,85,1 hour
+38,Pumpkin,85,5 to 6 minutes
+39,Pumpkin musquee de provence,85,20 minutes
 
 
