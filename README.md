@@ -7,6 +7,6 @@ Learning Objectives
 
 Through this project, I aimed to:
 
-    Understand how to design, create, and populate a SQLite database
-    Gain experience with the Flask web framework and creating APIs
-    Learn how to handle user input and display results in a web interface
+Understand how to design, create, and populate a SQLite database
+Gain experience with the Flask web framework and creating APIs
+Learn how to handle user input and display results in a web interface
