@@ -1,7 +1,11 @@
-from flask import Flask, request, jsonify
+from flask import Flask, request, jsonify, render_template  # Add render_template to your imports
 import sqlite3
 
 app = Flask(__name__)
+
+@app.route('/', methods=['GET'])
+def home():
+    return render_template('index.html')  # Serve the HTML page
 
 @app.route('/times', methods=['GET'])
 def get_times():

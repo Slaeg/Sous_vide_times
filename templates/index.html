@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Sous Vide Cooking Times</title>
+    <style>
+        /* Add any CSS styling here */
+    </style>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
+<body>
+    <h1>Sous Vide Cooking Times</h1>
+    <form id="search-form">
+        <label for="food_type">Food Type:</label><br>
+        <input type="text" id="food_type" name="food_type"><br>
+        <input type="submit" value="Search">
+    </form>
+    <div id="result"></div>
+
+    <script>
+        $("#search-form").submit(function(event) {
+            event.preventDefault();  // Prevent the form from causing a page reload
+            var foodType = $("#food_type").val();
+            $.get("http://localhost:5000/times?food_type=" + encodeURIComponent(foodType), function(data) {
+                console.log(data);  // Print the data to the console
+                // Clear the previous result
+                $("#result").empty();
+                
+                // Display the new result
+                data.forEach(function(item) {
+                    $("#result").append("<p>Temperature: " + item.temperature + ", Cooking Time: " + item.cooking_time + "</p>");
+                });
+            });
+        });
+    </script>
+    
+    
+</body>
+</html>
