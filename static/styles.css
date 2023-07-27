@@ -1,0 +1,49 @@
+/* Add some padding and center everything on the page */
+body {
+    display: grid;
+    place-items: center;
+    min-height: 100vh;
+    padding: 2em;
+    background-color: #f2f2f2;
+    font-family: Arial, sans-serif;
+}
+
+/* Style the form */
+#search-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    width: 100%;
+    max-width: 300px;
+}
+
+/* Style the result */
+#result {
+    margin-top: 2em;
+    width: 100%;
+    max-width: 300px;
+}
+
+/* Add an image to the bottom right corner of the page */
+.image {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    max-width: 150px;
+    max-height: 150px;
+}
+
+/* Media query for larger screens */
+@media (min-width: 600px) {
+    /* Increase the max width of the form and result on larger screens */
+    #search-form,
+    #result {
+        max-width: 600px;
+    }
+
+    /* Increase the size of the image on larger screens */
+    .image {
+        max-width: 200px;
+        max-height: 200px;
+    }
+}
