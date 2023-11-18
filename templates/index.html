@@ -14,23 +14,6 @@
     </form>
     <div id="result"></div>
     <img class="image" src="static/veg.png" alt="A sous vide or food">
-    <script>
-        $("#search-form").submit(function(event) {
-            event.preventDefault();  // Prevent the form from causing a page reload
-            var foodType = $("#food_type").val();
-            $.get("http://localhost:5000/times?food_type=" + encodeURIComponent(foodType), function(data) {
-                console.log(data);  // Print the data to the console
-                // Clear the previous result
-                $("#result").empty();
-                
-                // Display the new result
-                data.forEach(function(item) {
-                    $("#result").append("<p>Temperature: " + item.temperature + ", Cooking Time: " + item.cooking_time + "</p>");
-                });
-            });
-        });
-    </script>
-    
-    
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
 </body>
 </html>
