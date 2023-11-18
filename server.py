@@ -9,12 +9,15 @@ def home():
 
 @app.route('/times', methods=['GET'])
 def get_times():
-    food_type = request.args.get('food_type')
+    food_type = request.args.get('food_type', '').lower()  # Convert input to lowercase
     conn = sqlite3.connect('sous_vide.db')
     c = conn.cursor()
-    c.execute("SELECT temperature, cooking_time FROM SousVideTimes WHERE food_type=?", (food_type,))
+    # Use LOWER() function in SQL to make the comparison case-insensitive
+    c.execute("SELECT temperature, cooking_time FROM SousVideTimes WHERE LOWER(food_type) = ?", (food_type,))
     times = c.fetchall()
     conn.close()
+    
+
     
     # Check if any cooking times were found
     if times:
