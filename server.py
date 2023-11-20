@@ -1,6 +1,9 @@
+#import necessary modules, Flask creates the web app, request handles incoming requests, jsonify for returning json responses
+#render_templete for serving html files and sqlite imports the sqlite3 library for the database
 from flask import Flask, request, jsonify, render_template  # Add render_template to your imports
 import sqlite3
 
+#Initializes the Flask app.
 app = Flask(__name__)
 
 @app.route('/', methods=['GET'])
