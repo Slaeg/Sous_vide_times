@@ -6,11 +6,16 @@ import sqlite3
 #Initializes the Flask app.
 app = Flask(__name__)
 
+#Defines the home route ('/'). This route responds to GET requests
 @app.route('/', methods=['GET'])
+#The function that's called when the home route is accessed
 def home():
+    #This line serves the index.html file when the home route is accessed
     return render_template('index.html')  # Serve the HTML page
 
+#Defines a route for fetching cooking times
 @app.route('/times', methods=['GET'])
+#Defines the function to execute when this route is accessed
 def get_times():
     food_type = request.args.get('food_type', '').lower()  # Convert input to lowercase
     conn = sqlite3.connect('sous_vide.db')
