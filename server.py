@@ -23,8 +23,9 @@ def get_times():
     conn = sqlite3.connect('sous_vide.db')
     #Creates a cursor object to execute SQL queries
     c = conn.cursor()
-    # Use LOWER() function in SQL to make the comparison case-insensitive
+    #Executes an SQL query to fetch cooking times for the given food type
     c.execute("SELECT food_type, temperature, cooking_time FROM SousVideTimes WHERE LOWER(food_type) = ?", (food_type,))
+    #Retrieves all rows from the query result
     times = c.fetchall()
     conn.close()
     
