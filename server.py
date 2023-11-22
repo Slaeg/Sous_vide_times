@@ -27,18 +27,23 @@ def get_times():
     c.execute("SELECT food_type, temperature, cooking_time FROM SousVideTimes WHERE LOWER(food_type) = ?", (food_type,))
     #Retrieves all rows from the query result
     times = c.fetchall()
+    #Closes the database connection
     conn.close()
     
 
     
-    # Check if any cooking times were found
+    #Check if any cooking times were found
+    #Block formats the result into a list of dictionaries if records are found, otherwise returns a message indicating no data found
     if times:
         times = [{'food_type': row[0], 'temperature': row[1], 'cooking_time': row[2]} for row in times]
     else:
         times = {'message': f'No cooking times found for {food_type}'}
-        
+    
+    #Returns the data in JSON format    
     return jsonify(times)
 
+#This part runs the app if the script is executed directly. It's set to listen on all network interfaces
+#(host='0.0.0.0') and on port 5000. The debug=True enables debug mode for easier troubleshooting.
 if __name__ == '__main__':
     app.run(host='0.0.0.0', port=5000, debug=True)
 
