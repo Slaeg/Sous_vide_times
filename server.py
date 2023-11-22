@@ -17,6 +17,7 @@ def home():
 @app.route('/times', methods=['GET'])
 #Defines the function to execute when this route is accessed
 def get_times():
+    #Retrieves the food_type query parameter from the URL and converts it to lowercase.
     food_type = request.args.get('food_type', '').lower()  # Convert input to lowercase
     conn = sqlite3.connect('sous_vide.db')
     c = conn.cursor()
