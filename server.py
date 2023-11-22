@@ -17,9 +17,11 @@ def home():
 @app.route('/times', methods=['GET'])
 #Defines the function to execute when this route is accessed
 def get_times():
-    #Retrieves the food_type query parameter from the URL and converts it to lowercase.
-    food_type = request.args.get('food_type', '').lower()  # Convert input to lowercase
+    #Retrieves the food_type query parameter from the URL and converts it to lowercase
+    food_type = request.args.get('food_type', '').lower()
+    #Connects to the SQLite database
     conn = sqlite3.connect('sous_vide.db')
+    #Creates a cursor object to execute SQL queries
     c = conn.cursor()
     # Use LOWER() function in SQL to make the comparison case-insensitive
     c.execute("SELECT food_type, temperature, cooking_time FROM SousVideTimes WHERE LOWER(food_type) = ?", (food_type,))
