@@ -1,6 +1,8 @@
-/* Centers everything within the <body> tag using CSS Grid. */
-/* min-height: 100vh; ensures that the body takes at least the full viewport height.*/
-/* Applies padding and sets the background color.Sets the default font to Arial. */
+/* 
+Centers everything within the <body> tag using CSS Grid.
+min-height: 100vh; ensures that the body takes at least the full viewport height.
+Applies padding and sets the background color.Sets the default font to Arial. 
+*/
 body {
     display: grid;
     place-items: center;
@@ -10,7 +12,11 @@ body {
     font-family: Arial, sans-serif;
 }
 
-/* Style the form */
+/* 
+Styles the form (#search-form).
+Uses Flexbox for layout, arranging children elements in a column.
+Sets a maximum width, and ensures it takes the full width of its container. 
+*/
 #search-form {
     display: flex;
     flex-direction: column;
@@ -19,7 +25,10 @@ body {
     max-width: 300px;
 }
 
-/* Style the result */
+/*
+Styles the div (#result) where search results are displayed.
+Sets the top margin and maximum width, similar to the form.
+ */
 #result {
     margin-top: 2em;
     width: 100%;
