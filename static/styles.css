@@ -1,4 +1,6 @@
-/* Add some padding and center everything on the page */
+/* Centers everything within the <body> tag using CSS Grid. */
+/* min-height: 100vh; ensures that the body takes at least the full viewport height.*/
+/* Applies padding and sets the background color.Sets the default font to Arial. */
 body {
     display: grid;
     place-items: center;
