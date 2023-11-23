@@ -35,7 +35,11 @@ Sets the top margin and maximum width, similar to the form.
     max-width: 300px;
 }
 
-/* Add an image to the bottom right corner of the page */
+/*
+Styles the image with a class image.
+Positions it fixed at the bottom right corner of the page.
+Sets maximum width and height.
+*/
 .image {
     position: fixed;
     bottom: 20px;
@@ -44,7 +48,11 @@ Sets the top margin and maximum width, similar to the form.
     max-height: 150px;
 }
 
-/* Media query for larger screens */
+/*
+A media query that applies when the viewport is at least 600 pixels wide.
+Increases the maximum width of the form and result container
+Also increases the size of the image for larger screens.
+*/
 @media (min-width: 600px) {
     /* Increase the max width of the form and result on larger screens */
     #search-form,
