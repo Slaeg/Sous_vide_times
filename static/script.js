@@ -1,3 +1,5 @@
+//The javascript uses jQuery to handle interaction with the Flask backend:
+//The document ready funtion ensures that the code inside it only runs after the entire page (DOM) is fully loaded:
 $(document).ready(function() {
     $("#search-form").submit(function(event) {
         event.preventDefault();
