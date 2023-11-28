@@ -58,5 +58,16 @@ id,food_type,temperature,cooking_time
 57,St. Peter's fish,60,10 minutes
 58,Sturgeon,61,16 minutes
 59,Tuna,59.5,13 minutes
+60,Beef sirloin,59.5,45 minutes
+61,Chicken legs,64,1 hour
+62,Duck breast,60,25 minutes
+63,Duck leg,82.2,8 hours
+64,Egg,62.5,45 minutes to an hour and a quarter
+65,Lamb saddle and tenderloin,60.5,35 minutes
+66,Pork belly,82.1,12 hours
+67,Pork baby belly,82.1,12 hours
+68,Pork baby leg and shoulder,80,8 hours
+69,Pork baby racks and loins,60.5,20 minutes
+70,Poularde,62,1 and a half hours
 
 
