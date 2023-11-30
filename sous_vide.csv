@@ -69,5 +69,16 @@ id,food_type,temperature,cooking_time
 68,Pork baby leg and shoulder,80,8 hours
 69,Pork baby racks and loins,60.5,20 minutes
 70,Poularde,62,1 and a half hours
+71,Quail,64,1 hour
+72,Rabbit flank,74,12 hours
+73,Rabbit loin,64,12 minutes
+74,Sausage garlic,70,2 hours
+75,Squab breasts,59.5,30 minutes
+76,Squab legs,68,2 hours
+77,Veal calotte,60.5,15 minutes
+78,Veal tenderloin,61,30 minutes
+79,Beef fat,85,1 and a half hours
+80,Beef tongue,70,24 hours
+81,Calfs heart,79.4,24 hours
 
 
