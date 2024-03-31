@@ -1,66 +1,69 @@
-/* 
-Centers everything within the <body> tag using CSS Grid.
-min-height: 100vh; ensures that the body takes at least the full viewport height.
-Applies padding and sets the background color.Sets the default font to Arial. 
-*/
 body {
     display: grid;
     place-items: center;
     min-height: 100vh;
     padding: 2em;
-    background-color: #f2f2f2;
-    font-family: Arial, sans-serif;
+    background-color: #fafafa; /* Lighter shade for a fresher look */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* More modern font stack */
 }
 
-/* 
-Styles the form (#search-form).
-Uses Flexbox for layout, arranging children elements in a column.
-Sets a maximum width, and ensures it takes the full width of its container. 
-*/
 #search-form {
     display: flex;
     flex-direction: column;
-    gap: 1em;
+    gap: 1.5em; /* Increased for better spacing */
     width: 100%;
-    max-width: 300px;
+    max-width: 350px; /* Slightly larger for better form visibility */
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1); /* Subtle shadow for depth */
+    padding: 20px;
+    background: white; /* Contrast with the body background */
+    border-radius: 8px; /* Rounded corners */
 }
 
-/*
-Styles the div (#result) where search results are displayed.
-Sets the top margin and maximum width, similar to the form.
- */
+#search-form input[type="text"] {
+    padding: 10px;
+    border: 1px solid #ccc; /* Softer border color */
+    border-radius: 4px; /* Rounded input fields */
+}
+
+#search-form input[type="submit"] {
+    padding: 10px;
+    background-color: #BA55D3; /* Brighter, more inviting color */
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer; /* Clearly shows it's clickable */
+    transition: background-color 0.3s ease; /* Smooth background transition */
+}
+
+#search-form input[type="submit"]:hover {
+    background-color: #8f0ab1; /* Darker shade on hover for interaction feedback */
+}
+
 #result {
     margin-top: 2em;
     width: 100%;
-    max-width: 300px;
+    max-width: 350px; /* Matched to form width */
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1); /* Consistency with form shadow */
+    padding: 15px;
+    background: white;
+    border-radius: 8px;
 }
 
-/*
-Styles the image with a class image.
-Positions it fixed at the bottom right corner of the page.
-Sets maximum width and height.
-*/
 .image {
     position: fixed;
     bottom: 20px;
     right: 20px;
     max-width: 150px;
     max-height: 150px;
+    border-radius: 50%; /* Circle shaped image */
 }
 
-/*
-A media query that applies when the viewport is at least 600 pixels wide.
-Increases the maximum width of the form and result container
-Also increases the size of the image for larger screens.
-*/
 @media (min-width: 600px) {
-    /* Increase the max width of the form and result on larger screens */
     #search-form,
     #result {
         max-width: 600px;
     }
 
-    /* Increase the size of the image on larger screens */
     .image {
         max-width: 200px;
         max-height: 200px;
@@ -69,12 +72,13 @@ Also increases the size of the image for larger screens.
 
 .ui-autocomplete {
     background-color: white;
-    border: 1px solid #aaa; /* Light grey border */
+    border: 1px solid #aaa;
     max-height: 200px;
-    overflow-y: auto; /* Enable vertical scrollbar if necessary */
-    overflow-x: hidden; /* Hide horizontal scrollbar */
-    padding: 5px 0; /* Vertical padding */
-    font-family: Arial, sans-serif;
+    overflow-y: auto;
+    overflow-x: hidden;
+    padding: 5px 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    border-radius: 4px; /* Unified rounded look */
 }
 
 .ui-autocomplete .ui-menu-item-wrapper {
@@ -83,5 +87,5 @@ Also increases the size of the image for larger screens.
 }
 
 .ui-autocomplete .ui-state-active {
-    background-color: #efefef; /* Light grey background for active item */
+    background-color: #efefef;
 }
