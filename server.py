@@ -42,6 +42,18 @@ def get_times():
     #Returns the data in JSON format    
     return jsonify(times)
 
+# New endpoint for food types autocomplete
+@app.route('/food_types', methods=['GET'])
+def get_food_types():
+    query = request.args.get('query', '').lower()
+    conn = sqlite3.connect('sous_vide.db')
+    c = conn.cursor()
+    c.execute("SELECT DISTINCT food_type FROM SousVideTimes WHERE food_type LIKE ?", ('%' + query + '%',))
+    food_types = c.fetchall()
+    conn.close()
+    food_types = [food_type[0] for food_type in food_types]
+    return jsonify(food_types)
+
 #This part runs the app if the script is executed directly. It's set to listen on all network interfaces
 #(host='0.0.0.0') and on port 5000. The debug=True enables debug mode for easier troubleshooting.
 if __name__ == '__main__':

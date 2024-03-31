@@ -66,3 +66,22 @@ Also increases the size of the image for larger screens.
         max-height: 200px;
     }
 }
+
+.ui-autocomplete {
+    background-color: white;
+    border: 1px solid #aaa; /* Light grey border */
+    max-height: 200px;
+    overflow-y: auto; /* Enable vertical scrollbar if necessary */
+    overflow-x: hidden; /* Hide horizontal scrollbar */
+    padding: 5px 0; /* Vertical padding */
+    font-family: Arial, sans-serif;
+}
+
+.ui-autocomplete .ui-menu-item-wrapper {
+    padding: .4em;
+    cursor: pointer;
+}
+
+.ui-autocomplete .ui-state-active {
+    background-color: #efefef; /* Light grey background for active item */
+}
