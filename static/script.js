@@ -17,6 +17,7 @@ $(document).ready(function() {
         }
     });
 
+    
     // Existing search form submission handling
     $("#search-form").submit(function(event) {
         event.preventDefault();
