@@ -80,3 +80,24 @@ While active development has ceased, the codebase remains available for educatio
 
 [Add your chosen license here]
 
+## How to Contribute
+
+We welcome contributions to this project! If you would like to contribute, please follow these guidelines:
+
+1. Fork the repository.
+2. Create a new branch for your feature or bugfix.
+3. Make your changes and commit them with clear and descriptive commit messages.
+4. Push your changes to your forked repository.
+5. Create a pull request to the main repository, describing your changes in detail.
+
+## How to Run Tests
+
+To run tests for this project, follow these steps:
+
+1. Ensure you have all the required dependencies installed.
+2. Navigate to the project directory.
+3. Run the test suite using the following command:
+   ```
+   python -m unittest discover tests
+   ```
+4. Review the test results to ensure all tests pass successfully.
