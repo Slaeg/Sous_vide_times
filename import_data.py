@@ -1,38 +1,64 @@
-
 import sqlite3
 import csv
 
-conn = sqlite3.connect('sous_vide.db')
+def create_connection(db_file):
+    """Create a database connection to the SQLite database specified by db_file."""
+    conn = None
+    try:
+        conn = sqlite3.connect(db_file)
+    except sqlite3.Error as e:
+        print(f"Error connecting to database: {e}")
+    return conn
 
-c = conn.cursor()
+def create_table(conn):
+    """Create the SousVideTimes table in the SQLite database."""
+    try:
+        c = conn.cursor()
+        c.execute('DROP TABLE IF EXISTS SousVideTimes')
+        c.execute('''
+            CREATE TABLE SousVideTimes(
+                id INTEGER PRIMARY KEY, 
+                food_type TEXT, 
+                temperature REAL, 
+                cooking_time TEXT)
+        ''')
+    except sqlite3.Error as e:
+        print(f"Error creating table: {e}")
 
-c.execute('DROP TABLE IF EXISTS SousVideTimes')
-c.execute('''
-    CREATE TABLE SousVideTimes(
-        id INTEGER PRIMARY KEY, 
-        food_type TEXT, 
-        temperature REAL, 
-        cooking_time TEXT)
-''')
+def insert_data(conn, csv_file):
+    """Insert data from the CSV file into the SousVideTimes table."""
+    try:
+        c = conn.cursor()
+        with open(csv_file, 'r') as file:
+            reader = csv.reader(file)
+            next(reader)  # Skip the header row
+            for row in reader:
+                if len(row) == 4:
+                    c.execute('''
+                        INSERT INTO SousVideTimes (id, food_type, temperature, cooking_time)
+                        VALUES (?, ?, ?, ?)
+                    ''', row)
+                else:
+                    print(f'Skipping row due to insufficient columns: {row}')
+        conn.commit()
+    except sqlite3.Error as e:
+        print(f"Error inserting data: {e}")
 
-with open('sous_vide.csv', 'r') as file:
-    # Create a CSV reader
-    reader = csv.reader(file)
-    
-    # Skip the header row
-    next(reader)
-    
-    # Insert each row into the database
-    for row in reader:
-        # Print out the row data for debugging
-        print(f'Row data: {row}')
-        if len(row) == 4:
-            c.execute('''
-                INSERT INTO SousVideTimes (id, food_type, temperature, cooking_time)
-                VALUES (?, ?, ?, ?)
-            ''', row)
-        else:
-            print(f'Skipping row due to insufficient columns: {row}')
+def main():
+    database = "sous_vide.db"
+    csv_file = "sous_vide.csv"
 
-conn.commit()
-conn.close()
+    # Create a database connection
+    conn = create_connection(database)
+    if conn is not None:
+        # Create table
+        create_table(conn)
+        # Insert data
+        insert_data(conn, csv_file)
+        # Close the connection
+        conn.close()
+    else:
+        print("Error! Cannot create the database connection.")
+
+if __name__ == '__main__':
+    main()
